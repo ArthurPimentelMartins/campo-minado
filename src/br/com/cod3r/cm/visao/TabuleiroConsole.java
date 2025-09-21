@@ -17,7 +17,7 @@ public class TabuleiroConsole {
         this.tabuleiro = tabuleiro;
     }
 
-    private void executarJogo() {
+    public void executarJogo() {
         try {
             boolean continuar = true;
 
@@ -61,8 +61,10 @@ public class TabuleiroConsole {
                 }
             }
 
+            System.out.println(tabuleiro);
             System.out.println("Você ganhou!!");
         } catch (ExplosaoException e) {
+            System.out.println(tabuleiro);
             System.out.println("Você perdeu!");
         }
     }
